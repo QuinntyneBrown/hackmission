@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/design-system/assets/logo-dark.svg">
-    <img src="docs/design-system/assets/logo.svg" alt="HackMission" width="320">
+    <img src="docs/design-system/assets/logo.svg" alt="HackMission logo mark" width="112" height="112">
   </picture>
 </p>
 
