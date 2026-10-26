@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion — HackMission design system</title>
+<meta name="description" content="Durations, easings and reduced motion.">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../assets/components.css">
+<link rel="stylesheet" href="../assets/ds.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ds-shell">
+  <nav class="ds-nav" aria-label="Design system">
+    <div class="ds-nav__brand"><a href="../index.html">HackMission DS</a><button class="ds-theme-toggle" type="button" aria-pressed="false">☾ Dark</button></div>
+    <details open><summary>Foundations</summary><ul>
+      <li><a href="../foundations/color.html">Color</a></li>
+      <li><a href="../foundations/typography.html">Typography</a></li>
+      <li><a href="../foundations/spacing.html">Spacing</a></li>
+      <li><a href="../foundations/layout.html">Layout</a></li>
+      <li><a href="../foundations/elevation.html">Elevation</a></li>
+      <li><a href="../foundations/shape.html">Shape</a></li>
+      <li><a href="../foundations/motion.html">Motion</a></li>
+      <li><a href="../foundations/iconography.html">Iconography</a></li>
+      <li><a href="../foundations/theming.html">Theming</a></li>
+      <li><a href="../foundations/responsive.html">Responsive</a></li>
+      <li><a href="../foundations/accessibility.html">Accessibility</a></li>
+      <li><a href="../foundations/content.html">Content</a></li>
+    </ul></details>
+    <details open><summary>Components</summary><ul>
+      <li><a href="../components/button.html">Button</a></li>
+      <li><a href="../components/button-group.html">Button group</a></li>
+      <li><a href="../components/link.html">Link</a></li>
+      <li><a href="../components/menu.html">Menu (dropdown)</a></li>
+      <li><a href="../components/text-field.html">Text field</a></li>
+      <li><a href="../components/textarea.html">Textarea</a></li>
+      <li><a href="../components/select.html">Select</a></li>
+      <li><a href="../components/checkbox.html">Checkbox</a></li>
+      <li><a href="../components/radio-group.html">Radio group</a></li>
+      <li><a href="../components/switch.html">Switch</a></li>
+      <li><a href="../components/form-field.html">Form field</a></li>
+      <li><a href="../components/form-layout.html">Form layout</a></li>
+      <li><a href="../components/site-header.html">Site header</a></li>
+      <li><a href="../components/sidebar-nav.html">Sidebar navigation</a></li>
+      <li><a href="../components/tabs.html">Tabs</a></li>
+      <li><a href="../components/breadcrumb.html">Breadcrumb</a></li>
+      <li><a href="../components/pagination.html">Pagination</a></li>
+      <li><a href="../components/site-footer.html">Site footer</a></li>
+      <li><a href="../components/skip-link.html">Skip link</a></li>
+      <li><a href="../components/card.html">Card</a></li>
+      <li><a href="../components/accordion.html">Accordion</a></li>
+      <li><a href="../components/dialog.html">Dialog</a></li>
+      <li><a href="../components/drawer.html">Drawer / sheet</a></li>
+      <li><a href="../components/tooltip.html">Tooltip</a></li>
+      <li><a href="../components/divider.html">Divider</a></li>
+      <li><a href="../components/layout-primitives.html">Container, grid & stack</a></li>
+      <li><a href="../components/table.html">Table</a></li>
+      <li><a href="../components/list.html">List</a></li>
+      <li><a href="../components/description-list.html">Description list</a></li>
+      <li><a href="../components/avatar.html">Avatar</a></li>
+      <li><a href="../components/badge.html">Badge</a></li>
+      <li><a href="../components/chip.html">Chip</a></li>
+      <li><a href="../components/toast.html">Toast</a></li>
+      <li><a href="../components/alert.html">Alert / banner</a></li>
+      <li><a href="../components/inline-message.html">Inline message</a></li>
+      <li><a href="../components/progress.html">Progress bar</a></li>
+      <li><a href="../components/spinner.html">Spinner</a></li>
+      <li><a href="../components/skeleton.html">Skeleton</a></li>
+      <li><a href="../components/empty-state.html">Empty state</a></li>
+      <li><a href="../components/error-page.html">Error page</a></li>
+      <li><a href="../components/logo.html">Logo</a></li>
+      <li><a href="../components/hero.html">Hero</a></li>
+      <li><a href="../components/video.html">Video player</a></li>
+      <li><a href="../components/steps.html">Steps</a></li>
+      <li><a href="../components/schedule.html">Schedule</a></li>
+      <li><a href="../components/statement.html">Statement</a></li>
+    </ul></details>
+    <details open><summary>Patterns</summary><ul>
+      <li><a href="../patterns/forms.html">Forms</a></li>
+      <li><a href="../patterns/feedback.html">Feedback & loading</a></li>
+      <li><a href="../patterns/empty-error.html">Empty & error states</a></li>
+      <li><a href="../patterns/navigation.html">Navigation & page structure</a></li>
+      <li><a href="../patterns/dialogs.html">Dialogs & overlays</a></li>
+      <li><a href="../patterns/tables.html">Data tables & lists</a></li>
+      <li><a href="../patterns/notifications.html">Notifications</a></li>
+      <li><a href="../patterns/content.html">Content & tone</a></li>
+    </ul></details>
+  </nav>
+  <main id="main" class="ds-main">
+    <header class="ds-header">
+      <p class="ds-kicker">Foundation</p>
+      <h1>Motion</h1>
+      <p class="ds-lead">Five durations, four easings, and a reduced-motion switch in the tokens.</p>
+      <div class="ds-meta"><span class="ds-pill ds-pill--ok">5 durations</span><span class="ds-pill">Reduced motion</span></div>
+      <ul class="ds-toc"><li><a href="#overview">Overview</a></li><li><a href="#durations">Durations</a></li><li><a href="#easings">Easings</a></li><li><a href="#choreography">Choreography</a></li><li><a href="#usage">Usage</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#tokens">All motion tokens</a></li></ul>
+    </header>
+    <section class="ds-section" id="overview"><h2><a href="#overview">Overview</a></h2>
+<p>Motion is restrained: colour changes in 120ms, reveals in 200ms, dialogs in 320ms. The hero does not animate. Under <code>prefers-reduced-motion</code> the tokens zero every duration, so components need no extra queries; only the spinner keeps moving, slower.</p>
+    </section>
+    <section class="ds-section" id="durations"><h2><a href="#durations">Durations</a></h2>
+<div class="ds-motion-demo" data-run="false" style="--demo-duration: var(--duration-instant); --demo-ease: var(--ease-standard)"><span class="dot"></span><button type="button" data-motion-run class="btn btn--sm">Replay <code>--duration-instant</code></button></div><div class="ds-motion-demo" data-run="false" style="--demo-duration: var(--duration-base); --demo-ease: var(--ease-standard)"><span class="dot"></span><button type="button" data-motion-run class="btn btn--sm">Replay <code>--duration-base</code></button></div><div class="ds-motion-demo" data-run="false" style="--demo-duration: var(--duration-slow); --demo-ease: var(--ease-standard)"><span class="dot"></span><button type="button" data-motion-run class="btn btn--sm">Replay <code>--duration-slow</code></button></div><div class="ds-motion-demo" data-run="false" style="--demo-duration: var(--duration-deliberate); --demo-ease: var(--ease-standard)"><span class="dot"></span><button type="button" data-motion-run class="btn btn--sm">Replay <code>--duration-deliberate</code></button></div><div class="ds-table-wrap"><table class="ds-table"><thead><tr><th scope="col">Token</th><th scope="col">Use</th><th scope="col">Light</th><th scope="col">Dark</th></tr></thead><tbody><tr><td><code>--duration-instant</code></td><td></td><td><span data-token="--duration-instant"></span></td><td><span data-theme="dark" data-token="--duration-instant"></span></td></tr><tr><td><code>--duration-base</code></td><td>reveal, menus, tooltips</td><td><span data-token="--duration-base"></span></td><td><span data-theme="dark" data-token="--duration-base"></span></td></tr><tr><td><code>--duration-slow</code></td><td>dialogs, sheets, page transitions</td><td><span data-token="--duration-slow"></span></td><td><span data-theme="dark" data-token="--duration-slow"></span></td></tr><tr><td><code>--duration-deliberate</code></td><td>progress, skeleton shimmer cycles</td><td><span data-token="--duration-deliberate"></span></td><td><span data-theme="dark" data-token="--duration-deliberate"></span></td></tr></tbody></table></div>
+    </section>
+    <section class="ds-section" id="easings"><h2><a href="#easings">Easings</a></h2>
+<div class="ds-table-wrap"><table class="ds-table"><thead><tr><th scope="col">Token</th><th scope="col">Use</th><th scope="col">Light</th><th scope="col">Dark</th></tr></thead><tbody><tr><td><code>--ease-standard</code></td><td></td><td><span data-token="--ease-standard"></span></td><td><span data-theme="dark" data-token="--ease-standard"></span></td></tr><tr><td><code>--ease-exit</code></td><td></td><td><span data-token="--ease-exit"></span></td><td><span data-theme="dark" data-token="--ease-exit"></span></td></tr></tbody></table></div><ul><li><code>--ease-standard</code> for colour and position changes.</li><li><code>--ease-enter</code> for things appearing (menus, dialogs, toasts).</li><li><code>--ease-exit</code> for things leaving.</li><li><code>--ease-spring</code> only for the check mark in a checkbox.</li></ul>
+    </section>
+    <section class="ds-section" id="choreography"><h2><a href="#choreography">Choreography</a></h2>
+<ul><li>Hover: background/border over fast.</li><li>Menus and tooltips: fade + 4px rise over base.</li><li>Dialogs: backdrop fade and panel rise 8px over slow; sheets slide up.</li><li>Toasts: slide up 8px over base in; slide out over base.</li><li>Skeleton shimmer and indeterminate progress: deliberate, looping.</li></ul>
+    </section>
+    <section class="ds-section" id="usage"><h2><a href="#usage">Usage</a></h2>
+<ul><li>Animate opacity and transform only; never layout properties.</li><li>No animation lasts longer than 500ms; nothing loops except status indicators.</li></ul>
+    </section>
+    <section class="ds-section" id="accessibility"><h2><a href="#accessibility">Accessibility</a></h2>
+<ul><li><code>prefers-reduced-motion: reduce</code> sets durations to 0.01ms in <code>tokens.css</code>.</li><li>No flashing; no parallax; the video never autoplays (2.2.2, 2.3.1).</li></ul>
+    </section>
+    <section class="ds-section" id="tokens"><h2><a href="#tokens">All motion tokens</a></h2>
+<p>Durations and easings are listed above.</p>
+    </section>
+
+    <footer class="ds-footer"><span>HackMission design system · extracted from <a href="../../mocks/index.html">docs/mocks</a> on 26 October 2026</span><a href="#top">Back to top</a></footer>
+  </main>
+</div>
+<script src="../assets/ds.js"></script>
+</body>
+</html>

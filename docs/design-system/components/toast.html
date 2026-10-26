@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toast — HackMission design system</title>
+<meta name="description" content="Transient status messages.">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../assets/components.css">
+<link rel="stylesheet" href="../assets/ds.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ds-shell">
+  <nav class="ds-nav" aria-label="Design system">
+    <div class="ds-nav__brand"><a href="../index.html">HackMission DS</a><button class="ds-theme-toggle" type="button" aria-pressed="false">☾ Dark</button></div>
+    <details open><summary>Foundations</summary><ul>
+      <li><a href="../foundations/color.html">Color</a></li>
+      <li><a href="../foundations/typography.html">Typography</a></li>
+      <li><a href="../foundations/spacing.html">Spacing</a></li>
+      <li><a href="../foundations/layout.html">Layout</a></li>
+      <li><a href="../foundations/elevation.html">Elevation</a></li>
+      <li><a href="../foundations/shape.html">Shape</a></li>
+      <li><a href="../foundations/motion.html">Motion</a></li>
+      <li><a href="../foundations/iconography.html">Iconography</a></li>
+      <li><a href="../foundations/theming.html">Theming</a></li>
+      <li><a href="../foundations/responsive.html">Responsive</a></li>
+      <li><a href="../foundations/accessibility.html">Accessibility</a></li>
+      <li><a href="../foundations/content.html">Content</a></li>
+    </ul></details>
+    <details open><summary>Components</summary><ul>
+      <li><a href="../components/button.html">Button</a></li>
+      <li><a href="../components/button-group.html">Button group</a></li>
+      <li><a href="../components/link.html">Link</a></li>
+      <li><a href="../components/menu.html">Menu (dropdown)</a></li>
+      <li><a href="../components/text-field.html">Text field</a></li>
+      <li><a href="../components/textarea.html">Textarea</a></li>
+      <li><a href="../components/select.html">Select</a></li>
+      <li><a href="../components/checkbox.html">Checkbox</a></li>
+      <li><a href="../components/radio-group.html">Radio group</a></li>
+      <li><a href="../components/switch.html">Switch</a></li>
+      <li><a href="../components/form-field.html">Form field</a></li>
+      <li><a href="../components/form-layout.html">Form layout</a></li>
+      <li><a href="../components/site-header.html">Site header</a></li>
+      <li><a href="../components/sidebar-nav.html">Sidebar navigation</a></li>
+      <li><a href="../components/tabs.html">Tabs</a></li>
+      <li><a href="../components/breadcrumb.html">Breadcrumb</a></li>
+      <li><a href="../components/pagination.html">Pagination</a></li>
+      <li><a href="../components/site-footer.html">Site footer</a></li>
+      <li><a href="../components/skip-link.html">Skip link</a></li>
+      <li><a href="../components/card.html">Card</a></li>
+      <li><a href="../components/accordion.html">Accordion</a></li>
+      <li><a href="../components/dialog.html">Dialog</a></li>
+      <li><a href="../components/drawer.html">Drawer / sheet</a></li>
+      <li><a href="../components/tooltip.html">Tooltip</a></li>
+      <li><a href="../components/divider.html">Divider</a></li>
+      <li><a href="../components/layout-primitives.html">Container, grid & stack</a></li>
+      <li><a href="../components/table.html">Table</a></li>
+      <li><a href="../components/list.html">List</a></li>
+      <li><a href="../components/description-list.html">Description list</a></li>
+      <li><a href="../components/avatar.html">Avatar</a></li>
+      <li><a href="../components/badge.html">Badge</a></li>
+      <li><a href="../components/chip.html">Chip</a></li>
+      <li><a href="../components/toast.html">Toast</a></li>
+    </ul></details>
+    <details open><summary>Patterns</summary><ul>
+      <li><a href="../patterns/forms.html">Forms</a></li>
+      <li><a href="../patterns/feedback.html">Feedback & loading</a></li>
+      <li><a href="../patterns/empty-error.html">Empty & error states</a></li>
+      <li><a href="../patterns/navigation.html">Navigation & page structure</a></li>
+      <li><a href="../patterns/dialogs.html">Dialogs & overlays</a></li>
+      <li><a href="../patterns/tables.html">Data tables & lists</a></li>
+      <li><a href="../patterns/notifications.html">Notifications</a></li>
+      <li><a href="../patterns/content.html">Content & tone</a></li>
+    </ul></details>
+  </nav>
+  <main id="main" class="ds-main">
+    <header class="ds-header">
+      <p class="ds-kicker">Component · Feedback</p>
+      <h1>Toast</h1>
+      <p class="ds-lead">A short message about something that just happened; errors stay until dismissed.</p>
+      <div class="ds-meta"><span class="ds-pill ds-pill--ok">WCAG 2.2 AA</span><span class="ds-pill">Status: stable</span><span class="ds-pill">Live region</span></div>
+      <ul class="ds-toc"><li><a href="#overview">Overview</a></li><li><a href="#anatomy">Anatomy</a></li><li><a href="#variants">Variants</a></li><li><a href="#sizes">Sizes</a></li><li><a href="#states">States</a></li><li><a href="#responsive">Responsive behaviour</a></li><li><a href="#theming">Theming</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#content">Content</a></li><li><a href="#do-dont">Do and don't</a></li><li><a href="#tokens">Tokens</a></li><li><a href="#code">Code</a></li><li><a href="#sources">Sources</a></li></ul>
+    </header>
+    <section class="ds-section" id="overview"><h2><a href="#overview">Overview</a></h2>
+<p>Toasts confirm what just happened ("You're on the list"), inform ("Confirmation email resent") or report a failure ("Couldn't add you", with Try again). They never carry the only copy of important information: the signup result is also shown in place.</p>
+    </section>
+    <section class="ds-section" id="anatomy"><h2><a href="#anatomy">Anatomy</a></h2>
+<div class="ds-anatomy"><figure class="ds-anatomy__figure"><div class="toast toast--danger"  style="max-width: 24rem;"><div style="flex:1"><strong>Couldn’t add you</strong><p class="text-muted">Our mailing service didn’t respond. Your email is still in the form.</p></div><button class="btn btn--sm" type="button">Try again</button><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><span class="ds-callout" style="left: 6%; top: 14%;" aria-hidden="true">1</span><span class="ds-callout" style="left: 64%; top: 40%;" aria-hidden="true">2</span><span class="ds-callout" style="left: 90%; top: 40%;" aria-hidden="true">3</span></figure><ol class="ds-anatomy__list"><li><div><b>Title + body</b></div></li><li><div><b>Action (optional)</b><small>Retry / Undo / View.</small></div></li><li><div><b>Dismiss</b></div></li></ol></div>
+    </section>
+    <section class="ds-section" id="variants"><h2><a href="#variants">Variants</a></h2>
+<div class="ds-example"><div class="ds-example__canvas "><div class="toast-region" role="status" aria-live="polite" style="position: static; width: 100%; align-items: flex-start;"><div class="toast toast--success"  style="max-width: 24rem;"><div style="flex:1"><strong>You’re on the list</strong><p class="text-muted">Confirm from your inbox to finish.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><div class="toast toast--info"  style="max-width: 24rem;"><div style="flex:1"><strong>Confirmation email resent</strong><p class="text-muted">Sent to amara.okafor@example.ca. Check spam if it isn’t there in 2 minutes.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><div class="toast toast--warning"  style="max-width: 24rem;"><div style="flex:1"><strong>Registration closes in 48 hours</strong><p class="text-muted">Toronto · 6–7 Feb.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div></div><div class="ds-example__caption"><span>Success, info, warning (polite).</span></div></div><div class="ds-example"><div class="ds-example__canvas "><div class="toast-region" role="alert" aria-live="assertive" style="position: static; width: 100%; align-items: flex-start;"><div class="toast toast--danger"  style="max-width: 24rem;"><div style="flex:1"><strong>Couldn’t add you</strong><p class="text-muted">Our mailing service didn’t respond. Your email is still in the form.</p></div><button class="btn btn--sm" type="button">Try again</button><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div></div><div class="ds-example__caption"><span>Danger (assertive) with an action; stays until dismissed.</span></div></div>
+    </section>
+    <section class="ds-section" id="sizes" data-na="One width: 24rem (full width below 640px)."><h2><a href="#sizes">Sizes</a></h2>
+<p class="ds-na">Not applicable: One width: 24rem (full width below 640px).</p>
+    </section>
+    <section class="ds-section" id="states"><h2><a href="#states">States</a></h2>
+<div class="ds-example"><div class="ds-example__canvas "><div class="toast-region" role="status" aria-live="polite" style="position: static; width: 100%; align-items: flex-start;"><div class="toast toast--success"  style="max-width: 24rem;"><div style="flex:1"><strong>You’re on the list</strong><p class="text-muted">Confirm from your inbox to finish.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><div class="toast toast--info"  style="max-width: 24rem;"><div style="flex:1"><strong>Confirmation email resent</strong><p class="text-muted">Sent to amara.okafor@example.ca.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div></div><div class="ds-example__caption"><span>Stacked: newest at the bottom, max three.</span></div></div><div class="ds-example"><div class="ds-example__canvas "><div class="toast-region" role="status" aria-live="polite" style="position: static; width: 100%; align-items: flex-start;"><div class="toast toast--success" data-state="leaving" style="max-width: 24rem;"><div style="flex:1"><strong>You’re on the list</strong><p class="text-muted">Confirm from your inbox to finish.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div></div><div class="ds-example__caption"><span>Leaving: slides out over <code>--duration-base</code>.</span></div></div><div class="ds-themes"><div data-theme="light"><div class="ds-example__canvas " style="padding: 0;"><div class="toast toast--success"  style="max-width: 24rem;"><div style="flex:1"><strong>You’re on the list</strong><p class="text-muted">Confirm from your inbox to finish.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><div class="toast toast--danger"  style="max-width: 24rem;"><div style="flex:1"><strong>Couldn’t add you</strong><p class="text-muted">Try again.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div></div><div data-theme="dark"><div class="ds-example__canvas " style="padding: 0;"><div class="toast toast--success"  style="max-width: 24rem;"><div style="flex:1"><strong>You’re on the list</strong><p class="text-muted">Confirm from your inbox to finish.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><div class="toast toast--danger"  style="max-width: 24rem;"><div style="flex:1"><strong>Couldn’t add you</strong><p class="text-muted">Try again.</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div></div></div>
+    </section>
+    <section class="ds-section" id="responsive"><h2><a href="#responsive">Responsive behaviour</a></h2>
+<ul><li>≥ 640px: bottom-right, 24rem wide.</li><li>< 640px: full width at the bottom with <code>env(safe-area-inset-bottom)</code>.</li></ul>
+    </section>
+    <section class="ds-section" id="theming"><h2><a href="#theming">Theming</a></h2>
+<p>Raised surface with a 4px left border in the status colour; the icon follows the status.</p>
+    </section>
+    <section class="ds-section" id="accessibility"><h2><a href="#accessibility">Accessibility</a></h2>
+<h3>Role and pattern</h3><p>The region is <code>role="status" aria-live="polite"</code> and exists in the DOM even when empty; error toasts use <code>role="alert"</code>. Toasts are not focused when they appear.</p><h3>Keyboard</h3><table class="ds-table ds-keys"><thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead><tbody><tr><td><kbd>Tab</kbd></td><td>Reaches the action and dismiss buttons in order.</td></tr><tr><td><kbd>Esc</kbd></td><td>Dismisses the focused toast.</td></tr></tbody></table><h3>Focus</h3><p>Focus is never moved to a toast; it stays where the person was.</p><h3>Labelling</h3><p>Title is the message; the action button says what it does.</p><h3>Contrast</h3><div class="ds-example__canvas ds-example__canvas--stack" style="padding: 0; gap: var(--space-2);"><div class="ds-pair"><span>Title</span><span class="ds-pair__ratio" data-contrast="--color-fg-default|--color-bg-surface-raised" data-min="4.5"></span></div><div class="ds-pair"><span>Body</span><span class="ds-pair__ratio" data-contrast="--color-fg-muted|--color-bg-surface-raised" data-min="4.5"></span></div><div class="ds-pair"><span>Success edge</span><span class="ds-pair__ratio" data-contrast="--color-success-solid|--color-bg-surface-raised" data-min="3"></span></div><div class="ds-pair"><span>Danger edge</span><span class="ds-pair__ratio" data-contrast="--color-danger-solid|--color-bg-surface-raised" data-min="3"></span></div></div><h3>Motion</h3><p>Slides up over <code>--duration-base</code>; auto-dismiss after 8 s, paused on hover and focus; errors never auto-dismiss. Under reduced motion toasts appear and vanish without sliding.</p><h3>Touch</h3><p>Buttons 32px with 8px gaps; the toast is ≥ 56px tall.</p>
+    </section>
+    <section class="ds-section" id="content"><h2><a href="#content">Content</a></h2>
+<ul><li>Title: what happened, past tense or state ("You're on the list", "Couldn't add you").</li><li>Body: what to do next, one sentence.</li><li>Action verbs: "Try again", "Undo", "View".</li></ul>
+    </section>
+    <section class="ds-section" id="do-dont"><h2><a href="#do-dont">Do and don't</a></h2>
+<div class="ds-dodont"><figure class="ds-do"><div class="ds-example__canvas"><div class="toast-region" role="alert" aria-live="assertive" style="position: static; width: 100%; align-items: flex-start;"><div class="toast toast--danger"  style="max-width: 24rem;"><div style="flex:1"><strong>Couldn’t add you</strong><p class="text-muted">Your email is still in the form.</p></div><button class="btn btn--sm" type="button">Try again</button><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div></div><figcaption>Error with the way forward, persistent.</figcaption></figure><figure class="ds-dont"><div class="ds-example__canvas"><div class="toast-region" role="status" aria-live="polite" style="position: static; width: 100%; align-items: flex-start;"><div class="toast toast--success"  style="max-width: 24rem;"><div style="flex:1"><strong>Success!</strong><p class="text-muted"></p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div></div><figcaption>“Success!” says nothing about what succeeded.</figcaption></figure></div>
+    </section>
+    <section class="ds-section" id="tokens"><h2><a href="#tokens">Tokens</a></h2>
+<div class="ds-table-wrap"><table class="ds-table"><thead><tr><th scope="col">Part</th><th scope="col">Token</th><th scope="col">Light</th><th scope="col">Dark</th></tr></thead><tbody><tr><td>Surface</td><td><code>--color-bg-surface-raised</code></td><td><span class="ds-swatch-cell" data-theme="light"><i data-token="--color-bg-surface-raised" data-swatch></i><span data-token="--color-bg-surface-raised"></span></span></td><td><span class="ds-swatch-cell" data-theme="dark"><i data-token="--color-bg-surface-raised" data-swatch></i><span data-token="--color-bg-surface-raised"></span></span></td></tr><tr><td>Status edge / icon</td><td><code>--color-success-solid</code>, <code>--color-warning-solid</code>, <code>--color-danger-solid</code>, <code>--color-info-solid</code></td><td><span class="ds-swatch-cell" data-theme="light"><i data-token="--color-success-solid" data-swatch></i><span data-token="--color-success-solid"></span></span></td><td><span class="ds-swatch-cell" data-theme="dark"><i data-token="--color-success-solid" data-swatch></i><span data-token="--color-success-solid"></span></span></td></tr><tr><td>Shadow / radius</td><td><code>--shadow-3</code>, <code>--radius-md</code></td><td><span data-token="--shadow-3"></span> / <span data-token="--radius-md"></span></td><td><span data-theme="dark" data-token="--shadow-3"></span> / <span data-theme="dark" data-token="--radius-md"></span></td></tr><tr><td>Layer</td><td><code>--z-toast</code></td><td><span data-token="--z-toast"></span></td><td><span data-theme="dark" data-token="--z-toast"></span></td></tr><tr><td>Motion</td><td><code>--duration-base</code>, <code>--ease-enter</code></td><td><span data-token="--duration-base"></span> / <span data-token="--ease-enter"></span></td><td><span data-theme="dark" data-token="--duration-base"></span> / <span data-theme="dark" data-token="--ease-enter"></span></td></tr></tbody></table></div>
+    </section>
+    <section class="ds-section" id="code"><h2><a href="#code">Code</a></h2>
+<pre><code>&lt;div class="toast-region" role="status" aria-live="polite"&gt;
+  &lt;div class="toast toast--success"&gt;
+    &lt;div class="toast__body"&gt;&lt;strong&gt;You’re on the list&lt;/strong&gt;&lt;p class="text-muted"&gt;Confirm from your inbox to finish.&lt;/p&gt;&lt;/div&gt;
+    &lt;button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Dismiss"&gt;…&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre><table class="ds-table"><thead><tr><th scope="col">Class / attribute</th><th scope="col">Effect</th></tr></thead><tbody><tr><td><code>.toast-region</code></td><td>Fixed live region (bottom-right).</td></tr><tr><td><code>.toast</code> + <code>--info/--success/--warning/--danger</code></td><td>Toast with tone.</td></tr><tr><td><code>data-state="leaving"</code></td><td>Exit animation.</td></tr><tr><td><code>role="alert"</code></td><td>Assertive errors.</td></tr></tbody></table>
+    </section>
+    <section class="ds-section" id="sources"><h2><a href="#sources">Sources</a></h2>
+<p>Extracted from these mocks:</p><ul><li><a href="../../mocks/notifications/signup-toast/success.html">notifications/signup-toast/success</a></li><li><a href="../../mocks/notifications/signup-toast/info.html">notifications/signup-toast/info</a></li><li><a href="../../mocks/notifications/signup-toast/danger.html">notifications/signup-toast/danger</a> — with Try again</li></ul><p>Drift fixed during extraction: none; the mocks already used the kit classes.</p>
+    </section>
+
+    <footer class="ds-footer"><span>HackMission design system · extracted from <a href="../../mocks/index.html">docs/mocks</a> on 26 October 2026</span><a href="#top">Back to top</a></footer>
+  </main>
+</div>
+<script src="../assets/ds.js"></script>
+</body>
+</html>

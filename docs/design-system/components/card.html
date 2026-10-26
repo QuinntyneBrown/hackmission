@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card — HackMission design system</title>
+<meta name="description" content="Surface grouping related content.">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../assets/components.css">
+<link rel="stylesheet" href="../assets/ds.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ds-shell">
+  <nav class="ds-nav" aria-label="Design system">
+    <div class="ds-nav__brand"><a href="../index.html">HackMission DS</a><button class="ds-theme-toggle" type="button" aria-pressed="false">☾ Dark</button></div>
+    <details open><summary>Foundations</summary><ul>
+      <li><a href="../foundations/color.html">Color</a></li>
+      <li><a href="../foundations/typography.html">Typography</a></li>
+      <li><a href="../foundations/spacing.html">Spacing</a></li>
+      <li><a href="../foundations/layout.html">Layout</a></li>
+      <li><a href="../foundations/elevation.html">Elevation</a></li>
+      <li><a href="../foundations/shape.html">Shape</a></li>
+      <li><a href="../foundations/motion.html">Motion</a></li>
+      <li><a href="../foundations/iconography.html">Iconography</a></li>
+      <li><a href="../foundations/theming.html">Theming</a></li>
+      <li><a href="../foundations/responsive.html">Responsive</a></li>
+      <li><a href="../foundations/accessibility.html">Accessibility</a></li>
+      <li><a href="../foundations/content.html">Content</a></li>
+    </ul></details>
+    <details open><summary>Components</summary><ul>
+      <li><a href="../components/button.html">Button</a></li>
+      <li><a href="../components/button-group.html">Button group</a></li>
+      <li><a href="../components/link.html">Link</a></li>
+      <li><a href="../components/menu.html">Menu (dropdown)</a></li>
+      <li><a href="../components/text-field.html">Text field</a></li>
+      <li><a href="../components/textarea.html">Textarea</a></li>
+      <li><a href="../components/select.html">Select</a></li>
+      <li><a href="../components/checkbox.html">Checkbox</a></li>
+      <li><a href="../components/radio-group.html">Radio group</a></li>
+      <li><a href="../components/switch.html">Switch</a></li>
+      <li><a href="../components/form-field.html">Form field</a></li>
+      <li><a href="../components/form-layout.html">Form layout</a></li>
+      <li><a href="../components/site-header.html">Site header</a></li>
+      <li><a href="../components/sidebar-nav.html">Sidebar navigation</a></li>
+      <li><a href="../components/tabs.html">Tabs</a></li>
+      <li><a href="../components/breadcrumb.html">Breadcrumb</a></li>
+      <li><a href="../components/pagination.html">Pagination</a></li>
+      <li><a href="../components/site-footer.html">Site footer</a></li>
+      <li><a href="../components/skip-link.html">Skip link</a></li>
+      <li><a href="../components/card.html">Card</a></li>
+    </ul></details>
+    <details open><summary>Patterns</summary><ul>
+      <li><a href="../patterns/forms.html">Forms</a></li>
+      <li><a href="../patterns/feedback.html">Feedback & loading</a></li>
+      <li><a href="../patterns/empty-error.html">Empty & error states</a></li>
+      <li><a href="../patterns/navigation.html">Navigation & page structure</a></li>
+      <li><a href="../patterns/dialogs.html">Dialogs & overlays</a></li>
+      <li><a href="../patterns/tables.html">Data tables & lists</a></li>
+      <li><a href="../patterns/notifications.html">Notifications</a></li>
+      <li><a href="../patterns/content.html">Content & tone</a></li>
+    </ul></details>
+  </nav>
+  <main id="main" class="ds-main">
+    <header class="ds-header">
+      <p class="ds-kicker">Component · Containers & overlays</p>
+      <h1>Card</h1>
+      <p class="ds-lead">A surface that groups one thing: an event, a result message, a CTA band.</p>
+      <div class="ds-meta"><span class="ds-pill ds-pill--ok">WCAG 2.2 AA</span><span class="ds-pill">Status: stable</span><span class="ds-pill">Container</span></div>
+      <ul class="ds-toc"><li><a href="#overview">Overview</a></li><li><a href="#anatomy">Anatomy</a></li><li><a href="#variants">Variants</a></li><li><a href="#sizes">Sizes</a></li><li><a href="#states">States</a></li><li><a href="#responsive">Responsive behaviour</a></li><li><a href="#theming">Theming</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#content">Content</a></li><li><a href="#do-dont">Do and don't</a></li><li><a href="#tokens">Tokens</a></li><li><a href="#code">Code</a></li><li><a href="#sources">Sources</a></li></ul>
+    </header>
+    <section class="ds-section" id="overview"><h2><a href="#overview">Overview</a></h2>
+<p>Cards group related content on a raised surface. On the marketing site the signup result and the CTA band are card-like surfaces; in the organiser tools event cards list the season. A card is never the control: a clickable card has one real link.</p>
+    </section>
+    <section class="ds-section" id="anatomy"><h2><a href="#anatomy">Anatomy</a></h2>
+<div class="ds-anatomy"><figure class="ds-anatomy__figure"><article class="card "  style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article><span class="ds-callout" style="left: 8%; top: 10%;" aria-hidden="true">1</span><span class="ds-callout" style="left: 80%; top: 10%;" aria-hidden="true">2</span><span class="ds-callout" style="left: 8%; top: 46%;" aria-hidden="true">3</span><span class="ds-callout" style="left: 8%; top: 84%;" aria-hidden="true">4</span></figure><ol class="ds-anatomy__list"><li><div><b>Title</b></div></li><li><div><b>Status badge</b></div></li><li><div><b>Body</b></div></li><li><div><b>Footer action</b></div></li></ol></div>
+    </section>
+    <section class="ds-section" id="variants"><h2><a href="#variants">Variants</a></h2>
+<div class="ds-example"><div class="ds-example__canvas "><article class="card "  style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article><article class="card card--interactive"  style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article><article class="card card--selected" aria-selected="true" style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article></div><div class="ds-example__caption"><span>Default, interactive (hover lift), selected.</span></div></div><h3>CTA band</h3><div class="ds-example"><div class="ds-example__canvas "><div class="cta-band" style="width:100%"><h2 style="font-size: var(--font-size-2xl)">Don’t miss the next one.</h2><p class="text-muted">Spots fill in days. Subscribers hear first.</p><a class="btn btn--primary btn--lg" href="#top">Get notified</a></div></div><div class="ds-example__caption"><span>The CTA band is a sunken card: one headline, one sentence, one button.</span></div></div><h3>Result card on ink</h3><div class="ds-example"><div class="ds-example__canvas "><div class="hero" style="padding: var(--space-4); border-radius: var(--radius-lg)"><div class="signup__result" role="status" style="margin:0"><svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><strong>Check your inbox, Amara.</strong><p>We sent a confirmation link to <strong>amara.okafor@example.ca</strong>.</p></div></div></div></div><div class="ds-example__caption"><span><code>.signup__result</code>: raised ink surface with a gold border.</span></div></div>
+    </section>
+    <section class="ds-section" id="sizes" data-na="Cards take the width of their column; padding is fixed at &lt;code&gt;--space-6&lt;/code&gt;."><h2><a href="#sizes">Sizes</a></h2>
+<p class="ds-na">Not applicable: Cards take the width of their column; padding is fixed at &lt;code&gt;--space-6&lt;/code&gt;.</p>
+    </section>
+    <section class="ds-section" id="states"><h2><a href="#states">States</a></h2>
+<div class="ds-matrix"><table><thead><tr><th scope="col">Variant</th><th scope="col">Default</th><th scope="col">Hover</th><th scope="col">Focus</th><th scope="col">Selected</th></tr></thead><tbody><tr><th scope="row">Interactive card</th><td><article class="card card--interactive"  style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article></td><td><article class="card card--interactive" data-state="hover" style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article></td><td><article class="card card--interactive" data-state="focus" style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article></td><td><article class="card card--interactive" aria-selected="true" style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article></td></tr></tbody></table></div><div class="ds-themes"><div data-theme="light"><div class="ds-example__canvas " style="padding: 0;"><article class="card "  style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article></div></div><div data-theme="dark"><div class="ds-example__canvas " style="padding: 0;"><article class="card "  style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article></div></div></div>
+    </section>
+    <section class="ds-section" id="responsive"><h2><a href="#responsive">Responsive behaviour</a></h2>
+<ul><li>Cards stack in one column below 768px; <code>.grid--auto</code> fills columns of ≥ 18rem above.</li><li>Padding stays <code>--space-6</code>; the CTA band keeps <code>--space-10</code> vertical.</li></ul>
+    </section>
+    <section class="ds-section" id="theming"><h2><a href="#theming">Theming</a></h2>
+<p>Surface background, default border, <code>--shadow-1</code>; dark theme raises the surface a step so the card still reads as lifted.</p>
+    </section>
+    <section class="ds-section" id="accessibility"><h2><a href="#accessibility">Accessibility</a></h2>
+<h3>Role and pattern</h3><p><code>&lt;article&gt;</code> (or <code>&lt;section&gt;</code>) with a heading. Interactive cards contain one link or button; the whole card is made clickable with a pseudo-element on that link, never with a click handler on the card.</p><h3>Keyboard</h3><table class="ds-table ds-keys"><thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead><tbody><tr><td><kbd>Tab</kbd></td><td>Reaches the card's link/button.</td></tr></tbody></table><h3>Focus</h3><p>Ring on the card's link; <code>.card--interactive</code> shows a ring on the card when its link is focused (<code>:focus-within</code>).</p><h3>Labelling</h3><p>Heading names the card; the badge adds the status in words.</p><h3>Contrast</h3><div class="ds-example__canvas ds-example__canvas--stack" style="padding: 0; gap: var(--space-2);"><div class="ds-pair"><span>Body text</span><span class="ds-pair__ratio" data-contrast="--color-fg-default|--color-bg-surface" data-min="4.5"></span></div><div class="ds-pair"><span>Muted text</span><span class="ds-pair__ratio" data-contrast="--color-fg-muted|--color-bg-surface" data-min="4.5"></span></div><div class="ds-pair"><span>CTA band text</span><span class="ds-pair__ratio" data-contrast="--color-fg-default|--color-bg-surface-sunken" data-min="4.5"></span></div><div class="ds-pair"><span>Result on ink</span><span class="ds-pair__ratio" data-contrast="--color-fg-hero|--color-bg-hero-raised" data-min="4.5"></span></div></div><h3>Motion</h3><p>Hover lift is a 1px translate over <code>--duration-fast</code>.</p><h3>Touch</h3><p>Interactive cards are ≥ 44px tall; the link inside is the target.</p>
+    </section>
+    <section class="ds-section" id="content"><h2><a href="#content">Content</a></h2>
+<ul><li>Title is a noun phrase; the body one or two sentences.</li><li>One action per card, in the footer.</li></ul>
+    </section>
+    <section class="ds-section" id="do-dont"><h2><a href="#do-dont">Do and don't</a></h2>
+<div class="ds-dodont"><figure class="ds-do"><div class="ds-example__canvas"><article class="card card--interactive"  style="max-width: 20rem;"><div class="card__header"><h3 class="card__title">Toronto · 6–7 Feb 2027</h3><span class="badge badge--success">Open</span></div><p class="text-muted">Registration opens 15 Dec. 120 places.</p><div class="card__footer"><a class="btn btn--sm" href="#top">Details</a></div></article></div><figcaption>One link; the card is a surface.</figcaption></figure><figure class="ds-dont"><div class="ds-example__canvas"><div class="card card--interactive" style="max-width:20rem" tabindex="0"><h3 class="card__title">Toronto</h3><button class="btn btn--sm" type="button">Details</button><button class="btn btn--sm" type="button">Share</button></div></div><figcaption>A focusable card with two buttons is a nested-control trap.</figcaption></figure></div>
+    </section>
+    <section class="ds-section" id="tokens"><h2><a href="#tokens">Tokens</a></h2>
+<div class="ds-table-wrap"><table class="ds-table"><thead><tr><th scope="col">Part</th><th scope="col">Token</th><th scope="col">Light</th><th scope="col">Dark</th></tr></thead><tbody><tr><td>Background / border</td><td><code>--color-bg-surface</code>, <code>--color-border-default</code></td><td><span class="ds-swatch-cell" data-theme="light"><i data-token="--color-bg-surface" data-swatch></i><span data-token="--color-bg-surface"></span></span></td><td><span class="ds-swatch-cell" data-theme="dark"><i data-token="--color-bg-surface" data-swatch></i><span data-token="--color-bg-surface"></span></span></td></tr><tr><td>Sunken (CTA band)</td><td><code>--color-bg-surface-sunken</code></td><td><span class="ds-swatch-cell" data-theme="light"><i data-token="--color-bg-surface-sunken" data-swatch></i><span data-token="--color-bg-surface-sunken"></span></span></td><td><span class="ds-swatch-cell" data-theme="dark"><i data-token="--color-bg-surface-sunken" data-swatch></i><span data-token="--color-bg-surface-sunken"></span></span></td></tr><tr><td>Selected border</td><td><code>--color-accent</code></td><td><span class="ds-swatch-cell" data-theme="light"><i data-token="--color-accent" data-swatch></i><span data-token="--color-accent"></span></span></td><td><span class="ds-swatch-cell" data-theme="dark"><i data-token="--color-accent" data-swatch></i><span data-token="--color-accent"></span></span></td></tr><tr><td>Padding</td><td><code>--space-6</code></td><td><span data-token="--space-6"></span></td><td><span data-theme="dark" data-token="--space-6"></span></td></tr><tr><td>Radius / shadow</td><td><code>--radius-lg</code>, <code>--shadow-1</code></td><td><span data-token="--radius-lg"></span> / <span data-token="--shadow-1"></span></td><td><span data-theme="dark" data-token="--radius-lg"></span> / <span data-theme="dark" data-token="--shadow-1"></span></td></tr></tbody></table></div>
+    </section>
+    <section class="ds-section" id="code"><h2><a href="#code">Code</a></h2>
+<pre><code>&lt;article class="card"&gt;
+  &lt;div class="card__header"&gt;&lt;h3 class="card__title"&gt;Toronto · 6–7 Feb 2027&lt;/h3&gt;&lt;span class="badge badge--success"&gt;Open&lt;/span&gt;&lt;/div&gt;
+  &lt;p&gt;Registration opens 15 Dec.&lt;/p&gt;
+  &lt;div class="card__footer"&gt;&lt;a class="btn btn--sm" href="/events/toronto"&gt;Details&lt;/a&gt;&lt;/div&gt;
+&lt;/article&gt;</code></pre><table class="ds-table"><thead><tr><th scope="col">Class / attribute</th><th scope="col">Effect</th></tr></thead><tbody><tr><td><code>.card</code></td><td>Surface with padding, border, shadow.</td></tr><tr><td><code>.card--interactive</code></td><td>Hover lift, pointer.</td></tr><tr><td><code>.card--selected</code> / <code>aria-selected</code></td><td>Accent border.</td></tr><tr><td><code>.cta-band</code></td><td>Sunken, centred CTA card.</td></tr><tr><td><code>.signup__result</code></td><td>Raised result card on ink.</td></tr></tbody></table>
+    </section>
+    <section class="ds-section" id="sources"><h2><a href="#sources">Sources</a></h2>
+<p>Extracted from these mocks:</p><ul><li><a href="../../mocks/pages/home/success.html">pages/home/success</a> — signup result card</li><li><a href="../../mocks/pages/home/already-subscribed.html">pages/home/already-subscribed</a></li><li><a href="../../mocks/pages/home/error.html">pages/home/error</a> — error result card</li></ul><p>Drift fixed during extraction: the result card used <code>--palette-ink-800</code> directly; it now reads <code>--color-bg-hero-raised</code>.</p>
+    </section>
+
+    <footer class="ds-footer"><span>HackMission design system · extracted from <a href="../../mocks/index.html">docs/mocks</a> on 26 October 2026</span><a href="#top">Back to top</a></footer>
+  </main>
+</div>
+<script src="../assets/ds.js"></script>
+</body>
+</html>

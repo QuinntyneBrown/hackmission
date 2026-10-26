@@ -23,7 +23,7 @@ hide the mock bar and notes.
 From the Magic Patterns spec: ink `#0B1B3A`, gold `#E8A33D`, paper `#F7F4EE`,
 Manrope 500/700/800. LogoMark is code braces `{ }` framing a gold cross; the
 lockup is **Hack**Mission (extrabold + medium). Brand tokens and marketing
-components are in `assets/brand.css`, layered over `tokens.css` and `ui.css`.
+components live in `../design-system/` (`tokens/tokens.css`, `assets/components.css`), which every mock links; `assets/fonts.css` only loads Manrope.
 
 ## Layout rhythm
 

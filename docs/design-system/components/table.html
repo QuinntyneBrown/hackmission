@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Table — HackMission design system</title>
+<meta name="description" content="Data table with sorting, row actions and states.">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../assets/components.css">
+<link rel="stylesheet" href="../assets/ds.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ds-shell">
+  <nav class="ds-nav" aria-label="Design system">
+    <div class="ds-nav__brand"><a href="../index.html">HackMission DS</a><button class="ds-theme-toggle" type="button" aria-pressed="false">☾ Dark</button></div>
+    <details open><summary>Foundations</summary><ul>
+      <li><a href="../foundations/color.html">Color</a></li>
+      <li><a href="../foundations/typography.html">Typography</a></li>
+      <li><a href="../foundations/spacing.html">Spacing</a></li>
+      <li><a href="../foundations/layout.html">Layout</a></li>
+      <li><a href="../foundations/elevation.html">Elevation</a></li>
+      <li><a href="../foundations/shape.html">Shape</a></li>
+      <li><a href="../foundations/motion.html">Motion</a></li>
+      <li><a href="../foundations/iconography.html">Iconography</a></li>
+      <li><a href="../foundations/theming.html">Theming</a></li>
+      <li><a href="../foundations/responsive.html">Responsive</a></li>
+      <li><a href="../foundations/accessibility.html">Accessibility</a></li>
+      <li><a href="../foundations/content.html">Content</a></li>
+    </ul></details>
+    <details open><summary>Components</summary><ul>
+      <li><a href="../components/button.html">Button</a></li>
+      <li><a href="../components/button-group.html">Button group</a></li>
+      <li><a href="../components/link.html">Link</a></li>
+      <li><a href="../components/menu.html">Menu (dropdown)</a></li>
+      <li><a href="../components/text-field.html">Text field</a></li>
+      <li><a href="../components/textarea.html">Textarea</a></li>
+      <li><a href="../components/select.html">Select</a></li>
+      <li><a href="../components/checkbox.html">Checkbox</a></li>
+      <li><a href="../components/radio-group.html">Radio group</a></li>
+      <li><a href="../components/switch.html">Switch</a></li>
+      <li><a href="../components/form-field.html">Form field</a></li>
+      <li><a href="../components/form-layout.html">Form layout</a></li>
+      <li><a href="../components/site-header.html">Site header</a></li>
+      <li><a href="../components/sidebar-nav.html">Sidebar navigation</a></li>
+      <li><a href="../components/tabs.html">Tabs</a></li>
+      <li><a href="../components/breadcrumb.html">Breadcrumb</a></li>
+      <li><a href="../components/pagination.html">Pagination</a></li>
+      <li><a href="../components/site-footer.html">Site footer</a></li>
+      <li><a href="../components/skip-link.html">Skip link</a></li>
+      <li><a href="../components/card.html">Card</a></li>
+      <li><a href="../components/accordion.html">Accordion</a></li>
+      <li><a href="../components/dialog.html">Dialog</a></li>
+      <li><a href="../components/drawer.html">Drawer / sheet</a></li>
+      <li><a href="../components/tooltip.html">Tooltip</a></li>
+      <li><a href="../components/divider.html">Divider</a></li>
+      <li><a href="../components/layout-primitives.html">Container, grid & stack</a></li>
+      <li><a href="../components/table.html">Table</a></li>
+    </ul></details>
+    <details open><summary>Patterns</summary><ul>
+      <li><a href="../patterns/forms.html">Forms</a></li>
+      <li><a href="../patterns/feedback.html">Feedback & loading</a></li>
+      <li><a href="../patterns/empty-error.html">Empty & error states</a></li>
+      <li><a href="../patterns/navigation.html">Navigation & page structure</a></li>
+      <li><a href="../patterns/dialogs.html">Dialogs & overlays</a></li>
+      <li><a href="../patterns/tables.html">Data tables & lists</a></li>
+      <li><a href="../patterns/notifications.html">Notifications</a></li>
+      <li><a href="../patterns/content.html">Content & tone</a></li>
+    </ul></details>
+  </nav>
+  <main id="main" class="ds-main">
+    <header class="ds-header">
+      <p class="ds-kicker">Component · Data display</p>
+      <h1>Table</h1>
+      <p class="ds-lead">Rows of records for the organiser tools: sortable, with row actions, loading and empty states.</p>
+      <div class="ds-meta"><span class="ds-pill ds-pill--ok">WCAG 2.2 AA</span><span class="ds-pill">Status: draft</span><span class="ds-pill">Core set</span></div>
+      <ul class="ds-toc"><li><a href="#overview">Overview</a></li><li><a href="#anatomy">Anatomy</a></li><li><a href="#variants">Variants</a></li><li><a href="#sizes">Sizes</a></li><li><a href="#states">States</a></li><li><a href="#responsive">Responsive behaviour</a></li><li><a href="#theming">Theming</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#content">Content</a></li><li><a href="#do-dont">Do and don't</a></li><li><a href="#tokens">Tokens</a></li><li><a href="#code">Code</a></li><li><a href="#sources">Sources</a></li></ul>
+    </header>
+    <section class="ds-section" id="overview"><h2><a href="#overview">Overview</a></h2>
+<p>Tables list records: subscribers, events, projects. None on the marketing site; the organiser tools need them. Use a <a href="list.html">list</a> when there are fewer than three columns.</p>
+    </section>
+    <section class="ds-section" id="anatomy"><h2><a href="#anatomy">Anatomy</a></h2>
+<div class="ds-anatomy"><figure class="ds-anatomy__figure" style="display:block"><div class="table-wrap" style="width:100%"><table class="table" ><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr ><td>amara.okafor@example.ca</td><td><span class="badge badge--success">Confirmed</span></td><td>15 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr><tr ><td>jonah.a@example.ca</td><td><span class="badge badge--warning">Pending</span></td><td>24 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr><tr ><td>mei.r@example.ca</td><td><span class="badge ">Unsubscribed</span></td><td>2 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr></tbody></table></div><span class="ds-callout" style="left: 70%; top: 8%;" aria-hidden="true">1</span><span class="ds-callout" style="left: 40%; top: 40%;" aria-hidden="true">2</span><span class="ds-callout" style="left: 92%; top: 40%;" aria-hidden="true">3</span></figure><ol class="ds-anatomy__list"><li><div><b>Sortable header</b><small><code>aria-sort</code> + button.</small></div></li><li><div><b>Status badge</b></div></li><li><div><b>Row actions</b><small>Visible on hover/focus, always on touch.</small></div></li></ol></div>
+    </section>
+    <section class="ds-section" id="variants"><h2><a href="#variants">Variants</a></h2>
+<div class="ds-example"><div class="ds-example__canvas "><div class="table-wrap" style="width:100%"><table class="table" ><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr ><td>amara.okafor@example.ca</td><td><span class="badge badge--success">Confirmed</span></td><td>15 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr><tr ><td>jonah.a@example.ca</td><td><span class="badge badge--warning">Pending</span></td><td>24 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr><tr ><td>mei.r@example.ca</td><td><span class="badge ">Unsubscribed</span></td><td>2 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr></tbody></table></div></div><div class="ds-example__caption"><span>Default with sortable column and row actions. Dense, selectable and sticky-header variants add classes.</span></div></div>
+    </section>
+    <section class="ds-section" id="sizes"><h2><a href="#sizes">Sizes</a></h2>
+<div class="ds-example"><div class="ds-example__canvas "><p class="text-muted">md: 12×16px cells (default) · sm: 8×12px (<code>.table--dense</code>).</p></div></div>
+    </section>
+    <section class="ds-section" id="states"><h2><a href="#states">States</a></h2>
+<div class="ds-matrix"><table><thead><tr><th scope="col">Variant</th><th scope="col">Default</th><th scope="col">Hover</th><th scope="col">Selected</th></tr></thead><tbody><tr><th scope="row">Row</th><td><div class="table-wrap" style="width:100%"><table class="table" ><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr ><td>amara.okafor@example.ca</td><td><span class="badge badge--success">Confirmed</span></td><td>15 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr></tbody></table></div></td><td><div class="table-wrap" style="width:100%"><table class="table" ><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr data-state="hover"><td>amara.okafor@example.ca</td><td><span class="badge badge--success">Confirmed</span></td><td>15 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr></tbody></table></div></td><td><div class="table-wrap" style="width:100%"><table class="table" ><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr aria-selected="true"><td>amara.okafor@example.ca</td><td><span class="badge badge--success">Confirmed</span></td><td>15 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr></tbody></table></div></td></tr></tbody></table></div><h3>Loading, empty</h3><div class="ds-example"><div class="ds-example__canvas "><div class="table-wrap" style="width:100%"><table class="table" aria-busy="true"><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr><td><span class="skeleton skeleton--text" style="width:60%"></span></td><td><span class="skeleton skeleton--text" style="width:40%"></span></td><td><span class="skeleton skeleton--text" style="width:30%"></span></td><td></td></tr><tr><td><span class="skeleton skeleton--text" style="width:60%"></span></td><td><span class="skeleton skeleton--text" style="width:40%"></span></td><td><span class="skeleton skeleton--text" style="width:30%"></span></td><td></td></tr><tr><td><span class="skeleton skeleton--text" style="width:60%"></span></td><td><span class="skeleton skeleton--text" style="width:40%"></span></td><td><span class="skeleton skeleton--text" style="width:30%"></span></td><td></td></tr></tbody></table></div></div><div class="ds-example__caption"><span>Skeleton rows keep the layout.</span></div></div><div class="ds-example"><div class="ds-example__canvas "><div class="table-wrap" style="width:100%"><table class="table" ><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr><td colspan="4"><div class="empty empty--compact"><h3 class="empty__title">No subscribers yet</h3><p class="text-muted">Share the signup link and they will appear here.</p></div></td></tr></tbody></table></div></div><div class="ds-example__caption"><span>Empty state inside the table.</span></div></div><div class="ds-themes"><div data-theme="light"><div class="ds-example__canvas " style="padding: 0;"><div class="table-wrap" style="width:100%"><table class="table" ><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr ><td>amara.okafor@example.ca</td><td><span class="badge badge--success">Confirmed</span></td><td>15 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr><tr ><td>jonah.a@example.ca</td><td><span class="badge badge--warning">Pending</span></td><td>24 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr></tbody></table></div></div></div><div data-theme="dark"><div class="ds-example__canvas " style="padding: 0;"><div class="table-wrap" style="width:100%"><table class="table" ><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr ><td>amara.okafor@example.ca</td><td><span class="badge badge--success">Confirmed</span></td><td>15 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr><tr ><td>jonah.a@example.ca</td><td><span class="badge badge--warning">Pending</span></td><td>24 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr></tbody></table></div></div></div></div>
+    </section>
+    <section class="ds-section" id="responsive"><h2><a href="#responsive">Responsive behaviour</a></h2>
+<ul><li>Scrolls horizontally inside <code>.table-wrap</code>; the first column may be sticky.</li><li>Below 768px a table with ≤ 4 columns may render as a card list when the page says so.</li></ul>
+    </section>
+    <section class="ds-section" id="theming"><h2><a href="#theming">Theming</a></h2>
+<p>Header on <code>--color-bg-surface-sunken</code>; hover rows <code>--color-bg-subtle</code>; selected rows <code>--color-accent-subtle</code>.</p>
+    </section>
+    <section class="ds-section" id="accessibility"><h2><a href="#accessibility">Accessibility</a></h2>
+<h3>Role and pattern</h3><p><code>&lt;table&gt;</code> with <code>&lt;caption&gt;</code>, <code>scope</code> on headers, <code>aria-sort</code> on the sorted column; sorting is a button inside the header.</p><h3>Keyboard</h3><table class="ds-table ds-keys"><thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead><tbody><tr><td><kbd>Tab</kbd></td><td>Sort buttons, then row actions in order.</td></tr><tr><td><kbd>Enter</kbd></td><td>Sorts / acts.</td></tr></tbody></table><h3>Focus</h3><p>Row actions become visible when any control in the row is focused.</p><h3>Labelling</h3><p>Caption names the table; the actions column header is visually hidden text.</p><h3>Contrast</h3><div class="ds-example__canvas ds-example__canvas--stack" style="padding: 0; gap: var(--space-2);"><div class="ds-pair"><span>Cell text</span><span class="ds-pair__ratio" data-contrast="--color-fg-default|--color-bg-surface" data-min="4.5"></span></div><div class="ds-pair"><span>Header text</span><span class="ds-pair__ratio" data-contrast="--color-fg-muted|--color-bg-surface-sunken" data-min="4.5"></span></div><div class="ds-pair"><span>Selected row</span><span class="ds-pair__ratio" data-contrast="--color-fg-default|--color-accent-subtle" data-min="4.5"></span></div></div><h3>Motion</h3><p>None.</p><h3>Touch</h3><p>Row actions are 32px buttons with the whole row as the hover target; on touch they are always visible.</p>
+    </section>
+    <section class="ds-section" id="content"><h2><a href="#content">Content</a></h2>
+<ul><li>Headers are short nouns; numbers right-aligned with <code>.num</code>.</li><li>Empty states say what will fill the table.</li></ul>
+    </section>
+    <section class="ds-section" id="do-dont"><h2><a href="#do-dont">Do and don't</a></h2>
+<div class="ds-dodont"><figure class="ds-do"><div class="ds-example__canvas"><div class="table-wrap" style="width:100%"><table class="table" ><caption class="visually-hidden">Subscribers</caption><thead><tr><th scope="col">Email</th><th scope="col">Status</th><th scope="col" aria-sort="descending"><button type="button">Joined</button></th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody><tr ><td>amara.okafor@example.ca</td><td><span class="badge badge--success">Confirmed</span></td><td>15 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr><tr ><td>jonah.a@example.ca</td><td><span class="badge badge--warning">Pending</span></td><td>24 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr><tr ><td>mei.r@example.ca</td><td><span class="badge ">Unsubscribed</span></td><td>2 Oct 2026</td><td class="row-actions"><button class="btn btn--sm btn--ghost" type="button">Resend</button></td></tr></tbody></table></div></div><figcaption>Caption, scopes, sort button.</figcaption></figure><figure class="ds-dont"><div class="ds-example__canvas"><table class="table"><tr><td><b>Email</b></td><td><b>Status</b></td></tr><tr><td>a@b.ca</td><td>ok</td></tr></table></div><figcaption>Bold cells are not headers.</figcaption></figure></div>
+    </section>
+    <section class="ds-section" id="tokens"><h2><a href="#tokens">Tokens</a></h2>
+<div class="ds-table-wrap"><table class="ds-table"><thead><tr><th scope="col">Part</th><th scope="col">Token</th><th scope="col">Light</th><th scope="col">Dark</th></tr></thead><tbody><tr><td>Header background</td><td><code>--color-bg-surface-sunken</code></td><td><span class="ds-swatch-cell" data-theme="light"><i data-token="--color-bg-surface-sunken" data-swatch></i><span data-token="--color-bg-surface-sunken"></span></span></td><td><span class="ds-swatch-cell" data-theme="dark"><i data-token="--color-bg-surface-sunken" data-swatch></i><span data-token="--color-bg-surface-sunken"></span></span></td></tr><tr><td>Row hover / selected</td><td><code>--color-bg-subtle</code>, <code>--color-accent-subtle</code></td><td><span class="ds-swatch-cell" data-theme="light"><i data-token="--color-bg-subtle" data-swatch></i><span data-token="--color-bg-subtle"></span></span></td><td><span class="ds-swatch-cell" data-theme="dark"><i data-token="--color-bg-subtle" data-swatch></i><span data-token="--color-bg-subtle"></span></span></td></tr><tr><td>Cell padding</td><td><code>--space-3</code>, <code>--space-4</code></td><td><span data-token="--space-3"></span> / <span data-token="--space-4"></span></td><td><span data-theme="dark" data-token="--space-3"></span> / <span data-theme="dark" data-token="--space-4"></span></td></tr></tbody></table></div>
+    </section>
+    <section class="ds-section" id="code"><h2><a href="#code">Code</a></h2>
+<pre><code>&lt;div class="table-wrap"&gt;
+  &lt;table class="table"&gt;
+    &lt;caption class="visually-hidden"&gt;Subscribers&lt;/caption&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Email&lt;/th&gt;&lt;th scope="col" aria-sort="descending"&gt;&lt;button type="button"&gt;Joined&lt;/button&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;amara.okafor@example.ca&lt;/td&gt;&lt;td&gt;15 Oct 2026&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre><table class="ds-table"><thead><tr><th scope="col">Class / attribute</th><th scope="col">Effect</th></tr></thead><tbody><tr><td><code>.table-wrap</code></td><td>Horizontal scroll container.</td></tr><tr><td><code>.table</code></td><td>The table.</td></tr><tr><td><code>.row-actions</code></td><td>Hover-revealed actions cell.</td></tr><tr><td><code>aria-selected</code> on <code>tr</code></td><td>Selected row.</td></tr><tr><td><code>aria-busy</code></td><td>Loading.</td></tr></tbody></table>
+    </section>
+    <section class="ds-section" id="sources"><h2><a href="#sources">Sources</a></h2>
+<p>Extracted from these mocks:</p><ul><li><a href="../../mocks/pages/home/default.html">pages/home/default</a> — not used; core-set component</li></ul><p>Drift fixed during extraction: none.</p>
+    </section>
+
+    <footer class="ds-footer"><span>HackMission design system · extracted from <a href="../../mocks/index.html">docs/mocks</a> on 26 October 2026</span><a href="#top">Back to top</a></footer>
+  </main>
+</div>
+<script src="../assets/ds.js"></script>
+</body>
+</html>

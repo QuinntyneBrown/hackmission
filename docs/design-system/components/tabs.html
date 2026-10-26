@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabs — HackMission design system</title>
+<meta name="description" content="Tab list switching panels.">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../assets/components.css">
+<link rel="stylesheet" href="../assets/ds.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ds-shell">
+  <nav class="ds-nav" aria-label="Design system">
+    <div class="ds-nav__brand"><a href="../index.html">HackMission DS</a><button class="ds-theme-toggle" type="button" aria-pressed="false">☾ Dark</button></div>
+    <details open><summary>Foundations</summary><ul>
+      <li><a href="../foundations/color.html">Color</a></li>
+      <li><a href="../foundations/typography.html">Typography</a></li>
+      <li><a href="../foundations/spacing.html">Spacing</a></li>
+      <li><a href="../foundations/layout.html">Layout</a></li>
+      <li><a href="../foundations/elevation.html">Elevation</a></li>
+      <li><a href="../foundations/shape.html">Shape</a></li>
+      <li><a href="../foundations/motion.html">Motion</a></li>
+      <li><a href="../foundations/iconography.html">Iconography</a></li>
+      <li><a href="../foundations/theming.html">Theming</a></li>
+      <li><a href="../foundations/responsive.html">Responsive</a></li>
+      <li><a href="../foundations/accessibility.html">Accessibility</a></li>
+      <li><a href="../foundations/content.html">Content</a></li>
+    </ul></details>
+    <details open><summary>Components</summary><ul>
+      <li><a href="../components/button.html">Button</a></li>
+      <li><a href="../components/button-group.html">Button group</a></li>
+      <li><a href="../components/link.html">Link</a></li>
+      <li><a href="../components/menu.html">Menu (dropdown)</a></li>
+      <li><a href="../components/text-field.html">Text field</a></li>
+      <li><a href="../components/textarea.html">Textarea</a></li>
+      <li><a href="../components/select.html">Select</a></li>
+      <li><a href="../components/checkbox.html">Checkbox</a></li>
+      <li><a href="../components/radio-group.html">Radio group</a></li>
+      <li><a href="../components/switch.html">Switch</a></li>
+      <li><a href="../components/form-field.html">Form field</a></li>
+      <li><a href="../components/form-layout.html">Form layout</a></li>
+      <li><a href="../components/site-header.html">Site header</a></li>
+      <li><a href="../components/sidebar-nav.html">Sidebar navigation</a></li>
+      <li><a href="../components/tabs.html">Tabs</a></li>
+    </ul></details>
+    <details open><summary>Patterns</summary><ul>
+      <li><a href="../patterns/forms.html">Forms</a></li>
+      <li><a href="../patterns/feedback.html">Feedback & loading</a></li>
+      <li><a href="../patterns/empty-error.html">Empty & error states</a></li>
+      <li><a href="../patterns/navigation.html">Navigation & page structure</a></li>
+      <li><a href="../patterns/dialogs.html">Dialogs & overlays</a></li>
+      <li><a href="../patterns/tables.html">Data tables & lists</a></li>
+      <li><a href="../patterns/notifications.html">Notifications</a></li>
+      <li><a href="../patterns/content.html">Content & tone</a></li>
+    </ul></details>
+  </nav>
+  <main id="main" class="ds-main">
+    <header class="ds-header">
+      <p class="ds-kicker">Component · Navigation</p>
+      <h1>Tabs</h1>
+      <p class="ds-lead">Switch between panels of related content without leaving the page.</p>
+      <div class="ds-meta"><span class="ds-pill ds-pill--ok">WCAG 2.2 AA</span><span class="ds-pill">Status: draft</span><span class="ds-pill">Core set</span></div>
+      <ul class="ds-toc"><li><a href="#overview">Overview</a></li><li><a href="#anatomy">Anatomy</a></li><li><a href="#variants">Variants</a></li><li><a href="#sizes">Sizes</a></li><li><a href="#states">States</a></li><li><a href="#responsive">Responsive behaviour</a></li><li><a href="#theming">Theming</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#content">Content</a></li><li><a href="#do-dont">Do and don't</a></li><li><a href="#tokens">Tokens</a></li><li><a href="#code">Code</a></li><li><a href="#sources">Sources</a></li></ul>
+    </header>
+    <section class="ds-section" id="overview"><h2><a href="#overview">Overview</a></h2>
+<p>Tabs switch a panel: upcoming vs past events. The marketing page uses sections and anchors instead; tabs are for the organiser tools. Use a <a href="button-group.html">button group</a> when the choice only changes how the same data is shown.</p>
+    </section>
+    <section class="ds-section" id="anatomy"><h2><a href="#anatomy">Anatomy</a></h2>
+<div class="ds-anatomy"><figure class="ds-anatomy__figure"><div class="tabs" role="tablist" aria-label="Season"><button class="tab" role="tab" aria-selected="true" id="t1" aria-controls="p1" type="button" >Upcoming <span class="badge">4</span></button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1">Past</button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1" disabled>Archive</button></div><span class="ds-callout" style="left: 12%; top: 12%;" aria-hidden="true">1</span><span class="ds-callout" style="left: 36%; top: 12%;" aria-hidden="true">2</span><span class="ds-callout" style="left: 12%; top: 84%;" aria-hidden="true">3</span></figure><ol class="ds-anatomy__list"><li><div><b>Selected tab</b><small>Accent text, 2px underline.</small></div></li><li><div><b>Count badge</b></div></li><li><div><b>Underline track</b><small>1px border under the list.</small></div></li></ol></div>
+    </section>
+    <section class="ds-section" id="variants"><h2><a href="#variants">Variants</a></h2>
+<div class="ds-example"><div class="ds-example__canvas "><div class="tabs" role="tablist" aria-label="Season"><button class="tab" role="tab" aria-selected="true" id="t1" aria-controls="p1" type="button" >Upcoming <span class="badge">4</span></button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1">Past</button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1" disabled>Archive</button></div></div><div class="ds-example__caption"><span>Underline tabs with a count. Pill tabs are a <code>.btn-group</code>.</span></div></div>
+    </section>
+    <section class="ds-section" id="sizes"><h2><a href="#sizes">Sizes</a></h2>
+<div class="ds-example"><div class="ds-example__canvas "><div class="tabs" role="tablist" aria-label="Season"><button class="tab" role="tab" aria-selected="true" id="t1" aria-controls="p1" type="button" >Upcoming <span class="badge">4</span></button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1">Past</button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1" disabled>Archive</button></div></div><div class="ds-example__caption"><span>One size (40px); small tabs are not used.</span></div></div>
+    </section>
+    <section class="ds-section" id="states"><h2><a href="#states">States</a></h2>
+<div class="ds-matrix"><table><thead><tr><th scope="col">Variant</th><th scope="col">Default</th><th scope="col">Hover</th><th scope="col">Focus</th><th scope="col">Selected</th><th scope="col">Disabled</th></tr></thead><tbody><tr><th scope="row">Tab</th><td><div class="tabs" role="tablist" aria-label="Ex"><button class="tab" role="tab" aria-selected="false" type="button" >Past</button></div></td><td><div class="tabs" role="tablist" aria-label="Ex"><button class="tab" role="tab" aria-selected="false" type="button" data-state="hover">Past</button></div></td><td><div class="tabs" role="tablist" aria-label="Ex"><button class="tab" role="tab" aria-selected="false" type="button" data-state="focus">Past</button></div></td><td><div class="tabs" role="tablist" aria-label="Ex"><button class="tab" role="tab" aria-selected="false" type="button" aria-selected="true">Past</button></div></td><td><div class="tabs" role="tablist" aria-label="Ex"><button class="tab" role="tab" aria-selected="false" type="button" disabled>Past</button></div></td></tr></tbody></table></div><div class="ds-themes"><div data-theme="light"><div class="ds-example__canvas " style="padding: 0;"><div class="tabs" role="tablist" aria-label="Season"><button class="tab" role="tab" aria-selected="true" id="t1" aria-controls="p1" type="button" >Upcoming <span class="badge">4</span></button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1">Past</button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1" disabled>Archive</button></div></div></div><div data-theme="dark"><div class="ds-example__canvas " style="padding: 0;"><div class="tabs" role="tablist" aria-label="Season"><button class="tab" role="tab" aria-selected="true" id="t1" aria-controls="p1" type="button" >Upcoming <span class="badge">4</span></button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1">Past</button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1" disabled>Archive</button></div></div></div></div>
+    </section>
+    <section class="ds-section" id="responsive"><h2><a href="#responsive">Responsive behaviour</a></h2>
+<ul><li>Tabs scroll horizontally with a fade when they overflow; they never wrap to two rows.</li><li>Labels stay short so three fit at 360px.</li></ul>
+    </section>
+    <section class="ds-section" id="theming"><h2><a href="#theming">Theming</a></h2>
+<p>Selected tab uses <code>--color-fg-accent</code> and <code>--color-accent</code> underline.</p>
+    </section>
+    <section class="ds-section" id="accessibility"><h2><a href="#accessibility">Accessibility</a></h2>
+<h3>Role and pattern</h3><p>APG <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/">Tabs</a> with automatic activation: <code>role="tablist"</code>, <code>tab</code>, <code>tabpanel</code>, <code>aria-selected</code>, <code>aria-controls</code>; unselected tabs have <code>tabindex="-1"</code>.</p><h3>Keyboard</h3><table class="ds-table ds-keys"><thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead><tbody><tr><td><kbd>Tab</kbd></td><td>Into the selected tab, then into the panel.</td></tr><tr><td><kbd>←</kbd> / <kbd>→</kbd></td><td>Moves and selects (automatic activation).</td></tr><tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>First / last tab.</td></tr></tbody></table><h3>Focus</h3><p>Ring on the tab; panel is focusable (<code>tabindex="0"</code>) when it has no focusable child.</p><h3>Labelling</h3><p>The tablist has <code>aria-label</code>; counts are badges with meaning.</p><h3>Contrast</h3><div class="ds-example__canvas ds-example__canvas--stack" style="padding: 0; gap: var(--space-2);"><div class="ds-pair"><span>Selected tab</span><span class="ds-pair__ratio" data-contrast="--color-fg-accent|--color-bg-canvas" data-min="4.5"></span></div><div class="ds-pair"><span>Unselected tab</span><span class="ds-pair__ratio" data-contrast="--color-fg-muted|--color-bg-canvas" data-min="4.5"></span></div><div class="ds-pair"><span>Underline</span><span class="ds-pair__ratio" data-contrast="--color-accent|--color-bg-canvas" data-min="3"></span></div></div><h3>Motion</h3><p>Underline moves instantly.</p><h3>Touch</h3><p>Tabs 40px tall, ≥ 44px wide.</p>
+    </section>
+    <section class="ds-section" id="content"><h2><a href="#content">Content</a></h2>
+<ul><li>Tab labels are short nouns: "Upcoming", "Past". No verbs.</li></ul>
+    </section>
+    <section class="ds-section" id="do-dont"><h2><a href="#do-dont">Do and don't</a></h2>
+<div class="ds-dodont"><figure class="ds-do"><div class="ds-example__canvas"><div class="tabs" role="tablist" aria-label="Season"><button class="tab" role="tab" aria-selected="true" id="t1" aria-controls="p1" type="button" >Upcoming <span class="badge">4</span></button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1">Past</button><button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1" disabled>Archive</button></div></div><figcaption>Short nouns, one selected.</figcaption></figure><figure class="ds-dont"><div class="ds-example__canvas"><div class="tabs" role="tablist" aria-label="Bad"><button class="tab" role="tab" aria-selected="true" type="button">View all the upcoming events</button><button class="tab" role="tab" aria-selected="false" type="button">Past</button></div></div><figcaption>Long labels force wrapping.</figcaption></figure></div>
+    </section>
+    <section class="ds-section" id="tokens"><h2><a href="#tokens">Tokens</a></h2>
+<div class="ds-table-wrap"><table class="ds-table"><thead><tr><th scope="col">Part</th><th scope="col">Token</th><th scope="col">Light</th><th scope="col">Dark</th></tr></thead><tbody><tr><td>Selected text / underline</td><td><code>--color-fg-accent</code>, <code>--color-accent</code></td><td><span class="ds-swatch-cell" data-theme="light"><i data-token="--color-fg-accent" data-swatch></i><span data-token="--color-fg-accent"></span></span></td><td><span class="ds-swatch-cell" data-theme="dark"><i data-token="--color-fg-accent" data-swatch></i><span data-token="--color-fg-accent"></span></span></td></tr><tr><td>Track</td><td><code>--color-border-default</code></td><td><span class="ds-swatch-cell" data-theme="light"><i data-token="--color-border-default" data-swatch></i><span data-token="--color-border-default"></span></span></td><td><span class="ds-swatch-cell" data-theme="dark"><i data-token="--color-border-default" data-swatch></i><span data-token="--color-border-default"></span></span></td></tr><tr><td>Height</td><td><code>--control-height-md</code></td><td><span data-token="--control-height-md"></span></td><td><span data-theme="dark" data-token="--control-height-md"></span></td></tr></tbody></table></div>
+    </section>
+    <section class="ds-section" id="code"><h2><a href="#code">Code</a></h2>
+<pre><code>&lt;div class="tabs" role="tablist" aria-label="Season"&gt;
+  &lt;button class="tab" role="tab" aria-selected="true" id="t-up" aria-controls="p-up" type="button"&gt;Upcoming&lt;/button&gt;
+  &lt;button class="tab" role="tab" aria-selected="false" id="t-past" aria-controls="p-past" type="button" tabindex="-1"&gt;Past&lt;/button&gt;
+&lt;/div&gt;
+&lt;section id="p-up" role="tabpanel" aria-labelledby="t-up"&gt;…&lt;/section&gt;</code></pre><table class="ds-table"><thead><tr><th scope="col">Class / attribute</th><th scope="col">Effect</th></tr></thead><tbody><tr><td><code>.tabs</code> / <code>.tab</code></td><td>List and tab.</td></tr><tr><td><code>aria-selected</code></td><td>Selected state.</td></tr></tbody></table>
+    </section>
+    <section class="ds-section" id="sources"><h2><a href="#sources">Sources</a></h2>
+<p>Extracted from these mocks:</p><ul><li><a href="../../mocks/pages/home/default.html">pages/home/default</a> — not used; core-set component</li></ul><p>Drift fixed during extraction: none.</p>
+    </section>
+
+    <footer class="ds-footer"><span>HackMission design system · extracted from <a href="../../mocks/index.html">docs/mocks</a> on 26 October 2026</span><a href="#top">Back to top</a></footer>
+  </main>
+</div>
+<script src="../assets/ds.js"></script>
+</body>
+</html>
