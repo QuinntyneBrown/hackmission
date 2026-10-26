@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="docs/design-system/assets/logo.svg" alt="HackMission" width="320">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/design-system/assets/logo-dark.svg">
+    <img src="docs/design-system/assets/logo.svg" alt="HackMission" width="320">
+  </picture>
 </p>
 
 # HackMission

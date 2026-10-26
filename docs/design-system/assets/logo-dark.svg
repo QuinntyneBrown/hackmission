@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" role="img" aria-labelledby="title desc">
+  <title id="title">HackMission</title>
+  <desc id="desc">HackMission logo: code braces frame a gold cross beside the word HackMission.</desc>
+  <g fill="none" stroke="#F7F4EE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43 18C25 18 24 30 24 48v12c0 12-6 18-18 18 12 0 18 6 18 18v12c0 18 1 30 19 30"/>
+    <path d="M101 18c18 0 19 12 19 30v12c0 12 6 18 18 18-12 0-18 6-18 18v12c0 18-1 30-19 30"/>
+  </g>
+  <g fill="#E8A33D">
+    <rect x="65" y="28" width="14" height="76" rx="3"/>
+    <rect x="46" y="47" width="52" height="14" rx="3"/>
+  </g>
+  <text x="148" y="83" fill="#F7F4EE" font-family="Manrope, Arial, sans-serif" font-size="54" letter-spacing="-3"><tspan font-weight="800">Hack</tspan><tspan font-weight="500">Mission</tspan></text>
+</svg>
