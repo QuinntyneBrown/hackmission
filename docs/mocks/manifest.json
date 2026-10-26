@@ -1,0 +1,131 @@
+{
+  "project": "HackMission",
+  "screens": [
+    {
+      "id": "home",
+      "kind": "page",
+      "title": "Home",
+      "route": "/",
+      "requirements": [
+        "MKT-01",
+        "MKT-02",
+        "MKT-03"
+      ],
+      "states": [
+        "default",
+        "empty",
+        "submitting",
+        "invalid",
+        "success",
+        "already-subscribed",
+        "error"
+      ],
+      "not_applicable": {
+        "loading": "Statically prerendered page; no client data fetch before first paint."
+      }
+    },
+    {
+      "id": "confirm",
+      "kind": "page",
+      "title": "Confirm subscription",
+      "route": "/confirm?token=…",
+      "requirements": [
+        "MKT-04"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "error"
+      ],
+      "not_applicable": {
+        "empty": "A confirmation always has exactly one subscriber."
+      }
+    },
+    {
+      "id": "unsubscribe",
+      "kind": "page",
+      "title": "Unsubscribe",
+      "route": "/unsubscribe?token=…",
+      "requirements": [
+        "MKT-05"
+      ],
+      "states": [
+        "default",
+        "submitting",
+        "success",
+        "error"
+      ],
+      "not_applicable": {
+        "loading": "Token is read server-side; page renders with the email filled in.",
+        "empty": "Always about one subscriber."
+      }
+    },
+    {
+      "id": "privacy",
+      "kind": "page",
+      "title": "Privacy",
+      "route": "/privacy",
+      "requirements": [
+        "MKT-06"
+      ],
+      "states": [
+        "default"
+      ],
+      "not_applicable": {
+        "loading": "Static content.",
+        "empty": "Static content.",
+        "error": "Static content; server errors use the 404/500 pages."
+      }
+    },
+    {
+      "id": "not-found",
+      "kind": "page",
+      "title": "Page not found",
+      "route": "/*",
+      "requirements": [],
+      "states": [
+        "default"
+      ],
+      "not_applicable": {
+        "loading": "Static error page.",
+        "empty": "Static error page.",
+        "error": "This page is the error state."
+      }
+    },
+    {
+      "id": "video",
+      "kind": "dialog",
+      "title": "Watch the 20-second intro",
+      "opens_from": "home",
+      "requirements": [
+        "MKT-02"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "error"
+      ],
+      "not_applicable": {
+        "busy": "Nothing to submit; buffering is shown by the loading state.",
+        "invalid": "No input in this dialog."
+      }
+    },
+    {
+      "id": "signup-toast",
+      "kind": "notification",
+      "title": "Signup toast",
+      "opens_from": "home",
+      "requirements": [
+        "MKT-01"
+      ],
+      "states": [
+        "success",
+        "info",
+        "danger"
+      ],
+      "not_applicable": {
+        "warning": "No warning-level outcome exists for a mailing-list signup."
+      }
+    }
+  ]
+}

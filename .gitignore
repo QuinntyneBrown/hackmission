@@ -1,0 +1,70 @@
+# ---- OS / editors ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.sln.iml
+
+# ---- Secrets and local config ----
+.env
+.env.*
+!.env.example
+*.pfx
+*.pem
+appsettings.*.local.json
+backend/**/appsettings.Development.local.json
+**/secrets.json
+
+# ---- .NET ----
+bin/
+obj/
+*.user
+*.suo
+*.rsuser
+.vs/
+TestResults/
+*.trx
+coverage/
+*.coverage
+*.coveragexml
+artifacts/
+*.db
+*.db-shm
+*.db-wal
+
+# ---- Node / Angular ----
+node_modules/
+frontend/.angular/
+frontend/dist/
+frontend/out-tsc/
+npm-debug.log*
+yarn-error.log*
+.npm/
+
+# ---- Playwright ----
+e2e/test-results/
+e2e/playwright-report/
+e2e/blob-report/
+e2e/.auth/
+playwright/.cache/
+
+# ---- Python tooling ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# ---- Local caches and large generated media ----
+.cache/
+docs/mocks/assets/media/kokoro/
+*.onnx
+*.wav
+
+# ---- Agent tooling (local only) ----
+.claude/settings.local.json

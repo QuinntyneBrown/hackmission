@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home · empty — HackMission mocks</title>
+<meta name="mock:kind" content="page">
+<meta name="mock:screen" content="home">
+<meta name="mock:state" content="empty">
+<meta name="mock:requirements" content="MKT-01 MKT-02 MKT-03">
+<meta name="description" content="HackMission marketing home, empty state of the mailing-list signup.">
+<link rel="stylesheet" href="../../assets/tokens.css">
+<link rel="stylesheet" href="../../assets/ui.css">
+<link rel="stylesheet" href="../../assets/brand.css">
+<link rel="stylesheet" href="../../assets/mock.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<main id="main" class="marketing">
+  <section class="hero" aria-labelledby="hero-title">
+    <header class="site-header">
+  <a class="logo" href="../../pages/home/default.html" aria-label="HackMission home"><svg class="logo__mark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="brace" d="M21 9C15 9 14.5 13 14.5 19V25C14.5 29 12.5 32 8 32C12.5 32 14.5 35 14.5 39V45C14.5 51 15 55 21 55" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path class="brace" d="M43 9C49 9 49.5 13 49.5 19V25C49.5 29 51.5 32 56 32C51.5 32 49.5 35 49.5 39V45C49.5 51 49 55 43 55" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect class="cross" x="29" y="14" width="6" height="36" rx="1.5"/><rect class="cross" x="21.5" y="23" width="21" height="6" rx="1.5"/></svg><span class="logo__word"><b>Hack</b><span>Mission</span></span></a>
+  <span class="site-header__spacer"></span>
+  <nav class="site-header__links" aria-label="Primary">
+    <a href="../../pages/home/default.html#how">How it works</a>
+    <a href="../../pages/home/default.html#season">Season</a>
+    <a href="../../pages/home/default.html#faq">FAQ</a>
+  </nav>
+  <a class="btn btn--gold btn--sm" href="../../pages/home/default.html#signup">Get notified</a>
+</header>
+    <div class="hero__inner">
+      <div>
+        <h1 id="hero-title">Code in service of <em>the mission.</em></h1>
+        <p class="hero__lede">48 hours. Real problems.</p>
+        <form class="signup" id="signup" novalidate>
+          <label class="field__label visually-hidden" for="email">Email address</label>
+          <div class="signup__row">
+            <input class="input input--lg" id="email" name="email" type="email" autocomplete="email" inputmode="email" required value="">
+            <button class="btn btn--gold btn--lg" type="submit">Notify me</button>
+          </div>
+        </form>
+      </div>
+      <div class="video">
+          <div class="video__poster"><svg class="logo__mark" style="width:5rem;height:5rem;color:var(--palette-paper)" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="brace" d="M21 9C15 9 14.5 13 14.5 19V25C14.5 29 12.5 32 8 32C12.5 32 14.5 35 14.5 39V45C14.5 51 15 55 21 55" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path class="brace" d="M43 9C49 9 49.5 13 49.5 19V25C49.5 29 51.5 32 56 32C51.5 32 49.5 35 49.5 39V45C49.5 51 49 55 43 55" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect class="cross" x="29" y="14" width="6" height="36" rx="1.5"/><rect class="cross" x="21.5" y="23" width="21" height="6" rx="1.5"/></svg></div>
+          <a class="video__play" href="../../dialogs/video/default.html" aria-label="Play the 20-second HackMission intro video"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 5v14l12-7z" fill="currentColor" stroke="none"/></svg> Watch the intro</a>
+          <span class="video__meta">0:20 · captions</span>
+        </div>
+    </div>
+  </section>
+
+  <section class="section section--roomy container" aria-labelledby="who-title">
+    <div class="pair">
+      <div>
+        <h2 id="who-title">Built for churches and charities.</h2>
+        <p>A real problem Friday. A working tool Sunday.</p>
+      </div>
+      <div>
+        <h2>Open to everyone.</h2>
+        <p>No experience required.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="numbers" aria-label="At a glance">
+    <dl class="numbers__row container">
+      <div><dd>48</dd><dt>hours</dt></div>
+      <div><dd>4</dd><dt>cities a year</dt></div>
+      <div><dd>$0</dd><dt>to join</dt></div>
+    </dl>
+  </section>
+
+  <section class="section section--roomy container" id="how" aria-labelledby="how-title">
+    <p class="overline">How it works</p>
+    <h2 id="how-title">One weekend. Three moves.</h2>
+    <ol class="steps">
+      <li><span class="steps__num">{ 01 }</span><h3>Meet the mission</h3><p>Partners pitch.</p></li>
+      <li><span class="steps__num">{ 02 }</span><h3>Build</h3><p>Mentors alongside.</p></li>
+      <li><span class="steps__num">{ 03 }</span><h3>Hand it over</h3><p>Demo and deliver.</p></li>
+    </ol>
+  </section>
+
+  <section class="statement" aria-labelledby="statement-title">
+    <div class="container statement__inner">
+      <div>
+        <h2 id="statement-title">Build something <em>good</em> for someone else.</h2>
+        <a class="btn btn--primary btn--lg" href="#signup">Get notified</a>
+      </div>
+      <div class="statement__visual" aria-hidden="true"><svg class="logo__mark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="brace" d="M21 9C15 9 14.5 13 14.5 19V25C14.5 29 12.5 32 8 32C12.5 32 14.5 35 14.5 39V45C14.5 51 15 55 21 55" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path class="brace" d="M43 9C49 9 49.5 13 49.5 19V25C49.5 29 51.5 32 56 32C51.5 32 49.5 35 49.5 39V45C49.5 51 49 55 43 55" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect class="cross" x="29" y="14" width="6" height="36" rx="1.5"/><rect class="cross" x="21.5" y="23" width="21" height="6" rx="1.5"/></svg></div>
+    </div>
+  </section>
+
+  <section class="section section--roomy container" id="season" aria-labelledby="season-title">
+    <p class="overline">2027 season</p>
+    <h2 id="season-title">Dates coming soon.</h2>
+    <p class="lead">Host cities confirming now.</p>
+    <a class="btn btn--primary btn--lg" href="#signup">Be first to know</a>
+  </section>
+
+  <section class="section section--roomy container container--narrow" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Questions</h2>
+    <div class="accordion accordion--plain">
+      <details><summary>Who can come?</summary><p>Anyone 16+ in Canada.</p></details>
+      <details><summary>What does it cost?</summary><p>Nothing. Sponsors cover it.</p></details>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <a class="logo" href="../../pages/home/default.html" aria-label="HackMission home"><svg class="logo__mark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="brace" d="M21 9C15 9 14.5 13 14.5 19V25C14.5 29 12.5 32 8 32C12.5 32 14.5 35 14.5 39V45C14.5 51 15 55 21 55" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path class="brace" d="M43 9C49 9 49.5 13 49.5 19V25C49.5 29 51.5 32 56 32C51.5 32 49.5 35 49.5 39V45C49.5 51 49 55 43 55" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect class="cross" x="29" y="14" width="6" height="36" rx="1.5"/><rect class="cross" x="21.5" y="23" width="21" height="6" rx="1.5"/></svg><span class="logo__word"><b>Hack</b><span>Mission</span></span></a>
+  <nav aria-label="Footer">
+    <a href="../../pages/privacy/default.html">Privacy</a>
+    <a href="mailto:hello@hackmission.ca">hello@hackmission.ca</a>
+  </nav>
+  <p class="text-caption">© 2026 HackMission · Made in Canada 🍁</p>
+</footer>
+<p class="mock-note" style="top: auto; bottom: 5rem; left: 1rem; right: auto; max-width: 16rem;">No event announced: the date pill and season section switch to “announced soon” copy; the form is unchanged.</p>
+<nav class="mock-bar" aria-label="Mock navigation">
+  <a class="mock-bar__home" href="../../index.html" aria-label="All mocks">⌂</a>
+  <span class="mock-bar__screen">Home</span>
+  <ul class="mock-bar__states">
+    <li><a href="default.html">default</a></li>
+    <li><a href="empty.html" aria-current="page">empty</a></li>
+    <li><a href="submitting.html">submitting</a></li>
+    <li><a href="invalid.html">invalid</a></li>
+    <li><a href="success.html">success</a></li>
+    <li><a href="already-subscribed.html">already-subscribed</a></li>
+    <li><a href="error.html">error</a></li>
+  </ul>
+  <button type="button" data-theme-toggle aria-pressed="false">☾ Dark</button>
+  <button type="button" data-chrome-toggle aria-label="Hide mock chrome">×</button>
+</nav>
+<script src="../../assets/mock.js"></script>
+</body>
+</html>
